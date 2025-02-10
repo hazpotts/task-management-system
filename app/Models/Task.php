@@ -68,7 +68,7 @@ class Task extends Model
 
     public function getDueSoonAttribute(): bool
     {
-        return ! $this->completed_at && ! $this->submitted_at && $this->due_at && $this->due_at->isFuture() && $this->due_at->diffInDays() <= self::DUE_SOON_DAYS;
+        return (! $this->completed_at) && (! $this->submitted_at) && $this->due_at && $this->due_at->isFuture() && $this->due_at <= now()->addDays(self::DUE_SOON_DAYS);
     }
 
     public function getCategoryNameAttribute(): ?string
