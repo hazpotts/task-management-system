@@ -20,13 +20,15 @@ A modern task management system built with Laravel, featuring both a web interfa
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:hazpotts/task-management-system.git
    cd task-management-system
    ```
 
 2. **Install Dependencies**
    ```bash
+   valet use
    composer install
+   nvm use
    npm install
    ```
 
